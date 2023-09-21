@@ -38,12 +38,12 @@ def rename_files(text):
                 if d == 1:
                     os.rename(
                         f"./new/{file}",
-                        f"./new/{text}{year}{month}{day}.{file_extension}",
+                        f"./new/{text}{year}-{month}-{day}.{file_extension}",
                     )
                 else:
                     os.rename(
                         f"./new/{file}",
-                        f"./new/{text}{year}{month}{day}({d}).{file_extension}",
+                        f"./new/{text}{year}-{month}-{day}({d}).{file_extension}",
                     )
                 renamed = True
                 d = 1
