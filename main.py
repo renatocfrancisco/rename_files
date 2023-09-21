@@ -24,7 +24,7 @@ def rename_files(text):
     new_folder = os.listdir("./new")
     for file in new_folder:
         file_extension = file.split(".")[1]
-        date = os.path.getmtime(f"./img/{file}")
+        date = os.path.getmtime(f"./old/{file}")
         date = time.gmtime(date)
 
         day = "{:02d}".format(date.tm_mday)
@@ -53,5 +53,5 @@ def rename_files(text):
 
 create_new_folder()
 placeholder_name = input("Enter placeholder name: ")
-copy_paste_folder("./img")
+copy_paste_folder("./old")
 rename_files(placeholder_name)
